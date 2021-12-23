@@ -1,6 +1,4 @@
-﻿using QRCodeDecoderLibrary;
-using System;
-using System.Drawing;
+﻿using System;
 using Bytescout.BarCodeReader;
 using Com.AugustCellars.COSE;
 using Ionic.Zlib;
@@ -13,14 +11,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
-            //Bitmap bitmap = new Bitmap(@"C:\image.png");
-            //Color clr = bitmap.GetPixel(0, 0);
-            //QRDecoder Decoder = new QRDecoder();
-            //byte[][] DataByteArray = Decoder.ImageDecoder(bitmap);
-            //string Result = QRDecoder.ByteArrayToStr(DataByteArray[0]);
-            //Console.WriteLine(Result);
-
             using (Reader reader = new Reader("demo", "demo"))
             {
                 reader.BarcodeTypesToFind.QRCode = true;
@@ -33,8 +23,7 @@ namespace ConsoleApp1
                     var message = Program.Decode(code.Value);
                     Console.WriteLine(message);
                 }
-            }
-            
+            }            
             Console.ReadLine();
         }
 
