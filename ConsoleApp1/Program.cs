@@ -23,7 +23,8 @@ namespace ConsoleApp1
                     var message = Program.Decode(code.Value);
                     Console.WriteLine(message);
                 }
-            }            
+            }  
+            
             Console.ReadLine();
         }
 
